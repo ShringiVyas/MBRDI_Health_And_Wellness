@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #0F766E; /* teal-700 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #1E40AF; /* blue-800 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #059669; /* emerald-600 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Background Colors */
+    --color-background: #FAFAFA; /* gray-50 */
+    --color-foreground: #1F2937; /* gray-800 */
+    
+    /* Surface Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1F2937; /* gray-800 */
+    
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1F2937; /* gray-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F3F4F6; /* gray-100 */
+    --color-muted-foreground: #6B7280; /* gray-500 */
+    
+    /* Border & Input */
+    --color-border: rgba(107, 114, 128, 0.2); /* gray-500 with opacity */
+    --color-input: #E5E7EB; /* gray-200 */
+    --color-ring: #0F766E; /* teal-700 */
+    
+    /* State Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #1F2937; /* gray-800 */
+    
+    --color-error: #DC2626; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #DC2626; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Shadow Colors */
+    --shadow-primary: rgba(15, 118, 110, 0.08);
+    --shadow-subtle: rgba(0, 0, 0, 0.04);
+    
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+  }
+
+  .dark {
+    /* Primary Colors */
+    --color-primary: #14B8A6; /* teal-500 */
+    --color-primary-foreground: #0A0F0E; /* custom dark */
+    
+    /* Secondary Colors */
+    --color-secondary: #3B82F6; /* blue-500 */
+    --color-secondary-foreground: #0A0F0E; /* custom dark */
+    
+    /* Accent Colors */
+    --color-accent: #10B981; /* emerald-500 */
+    --color-accent-foreground: #0A0F0E; /* custom dark */
+    
+    /* Background Colors */
+    --color-background: #0A0F0E; /* custom dark */
+    --color-foreground: #E6E6E6; /* gray-200 */
+    
+    /* Surface Colors */
+    --color-card: #1A2220; /* custom dark elevated */
+    --color-card-foreground: #E6E6E6; /* gray-200 */
+    
+    --color-popover: #1A2220; /* custom dark elevated */
+    --color-popover-foreground: #E6E6E6; /* gray-200 */
+    
+    /* Muted Colors */
+    --color-muted: #2A3532; /* custom dark elevated */
+    --color-muted-foreground: #9CA3AF; /* gray-400 */
+    
+    /* Border & Input */
+    --color-border: rgba(156, 163, 175, 0.2); /* gray-400 with opacity */
+    --color-input: #2A3532; /* custom dark elevated */
+    --color-ring: #14B8A6; /* teal-500 */
+    
+    /* State Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #0A0F0E; /* custom dark */
+    
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #0A0F0E; /* custom dark */
+    
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Shadow Colors */
+    --shadow-primary: rgba(20, 184, 166, 0.15);
+    --shadow-subtle: rgba(0, 0, 0, 0.2);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 1.25;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+  }
+
+  .data-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
+    }
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .shadow-elevation-1 {
+    box-shadow: 0 1px 3px var(--shadow-primary);
+  }
+
+  .shadow-elevation-2 {
+    box-shadow: 0 2px 6px var(--shadow-primary);
+  }
+
+  .shadow-elevation-3 {
+    box-shadow: 0 6px 12px var(--shadow-primary);
+  }
+
+  .shadow-elevation-4 {
+    box-shadow: 0 12px 24px var(--shadow-primary);
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 1px 3px var(--shadow-subtle);
+  }
+
+  .focus-ring {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-1 hover:shadow-elevation-2;
+  }
+
+  .press-scale {
+    @apply active:scale-[0.97] transition-smooth;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-muted) transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: var(--color-muted);
+    border-radius: 4px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted-foreground);
+  }
+}
